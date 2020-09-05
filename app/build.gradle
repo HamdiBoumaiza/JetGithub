@@ -64,11 +64,15 @@ dependencies {
     implementation Libs.AndroidX.Compose.tooling
 
     implementation Libs.Accompanist.coil
+    implementation Libs.material
 
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation Libs.Coroutines.core
+    implementation Libs.Coroutines.android
 
-    testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation Libs.Test.junit
+    testImplementation Libs.Test.core
+    testImplementation Libs.Test.rules
+    androidTestImplementation Libs.Test.Ext.junitExtension
+    androidTestImplementation Libs.Test.espressoCore
 
 }
