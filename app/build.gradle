@@ -3,6 +3,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -43,7 +45,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerVersion Libs.Kotlin.version
+        kotlinCompilerVersion Versions.kotlin
         kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
     }
 }
@@ -63,11 +65,32 @@ dependencies {
     implementation Libs.AndroidX.Compose.iconsExtended
     implementation Libs.AndroidX.Compose.tooling
 
-    implementation Libs.Accompanist.coil
+    implementation Libs.coil
     implementation Libs.material
+    implementation Libs.timber
 
-    implementation Libs.Coroutines.core
-    implementation Libs.Coroutines.android
+    implementation Libs.coroutinesAndroid
+    implementation Libs.coroutinesCore
+
+    implementation Libs.daggerHiltAndroid
+    implementation Libs.daggerCommon
+    implementation Libs.daggerViewModel
+    kapt Libs.daggerCompiler
+    kapt Libs.daggerHiltCompiler
+
+    implementation Libs.lifecycleExtension
+    implementation Libs.lifecycleViewModel
+    implementation Libs.lifecycleRuntime
+
+    implementation Libs.retrofit
+    implementation Libs.retrofitGsonConverter
+
+    implementation Libs.okhttp
+    implementation Libs.okhttpLogging
+
+    implementation Libs.stethoOkhttp3
+    implementation Libs.stetho
+
 
     testImplementation Libs.Test.junit
     testImplementation Libs.Test.core
