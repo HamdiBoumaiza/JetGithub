@@ -1,4 +1,4 @@
-package com.hb.jetgithub
+package com.hb.jetgithub.ui
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.preferredSize

@@ -1,25 +1,19 @@
-package com.hb.jetgithub
+package com.hb.jetgithub.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.savedinstancestate.savedInstanceState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import dev.chrisbanes.accompanist.coil.CoilImage
+import com.hb.jetgithub.R
 
 
 @Composable
@@ -62,9 +56,9 @@ private fun Content(title: String) {
 
 @Composable
 private fun BottomBar(
-  items: List<HomeSection>,
-  currentSection: HomeSection,
-  onSectionSelected: (HomeSection) -> Unit,
+    items: List<HomeSection>,
+    currentSection: HomeSection,
+    onSectionSelected: (HomeSection) -> Unit,
 ) {
   BottomNavigation(
       modifier = Modifier.height(bottomBarHeight),

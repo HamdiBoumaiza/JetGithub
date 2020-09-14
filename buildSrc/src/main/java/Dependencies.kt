@@ -13,7 +13,7 @@ object Versions {
     const val coroutine = "1.3.9"
     const val timber = "4.7.1"
     const val dagger = "2.29.1-alpha"
-    const val daggerHilt = "1.0.0-SNAPSHOT"
+    const val daggerHilt = "1.0.0-alpha02"
     const val accompanist = "0.2.0"
 
 }

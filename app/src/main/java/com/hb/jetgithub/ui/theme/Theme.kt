@@ -1,4 +1,4 @@
-package com.hb.jetgithub.ui
+package com.hb.jetgithub.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
