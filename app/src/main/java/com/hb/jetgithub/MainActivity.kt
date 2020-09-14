@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.setContent
 import com.hb.jetgithub.ui.JetGithubTheme
+import com.hb.jetgithub.ui.purple200
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         setContent {
             JetGithubTheme {
                 // A surface container using the 'background' color from the theme
-                //  Surface(color = MaterialTheme.colors.background) {
-                Greeting("Android")
-                // }
+                Surface(color = MaterialTheme.colors.background) {
+                    mainScreen()
+                }
             }
         }
     }
@@ -25,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(
+        text = "Hello $name!"
+    )
 }
 
 @Composable
