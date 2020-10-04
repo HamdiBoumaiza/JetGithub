@@ -1,4 +1,6 @@
-import com.hb.jetgithub.buildsrc.*
+import com.hb.jetgithub.buildsrc.Libs
+import com.hb.jetgithub.buildsrc.Versions
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
@@ -89,6 +91,12 @@ dependencies {
     implementation Libs.stethoOkhttp3
     implementation Libs.stetho
 
+    implementation Libs.activityKtx
+    implementation Libs.fragmentKtx
+
+    implementation Libs.room
+    implementation Libs.roomKtx
+    kapt Libs.roomCompiler
 
     testImplementation Libs.Test.junit
     testImplementation Libs.Test.core

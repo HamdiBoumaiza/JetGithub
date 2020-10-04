@@ -5,15 +5,22 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.savedinstancestate.savedInstanceState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import com.hb.jetgithub.R
+import dev.chrisbanes.accompanist.coil.CoilImage
 
 
 @Composable
@@ -74,14 +81,14 @@ private fun BottomBar(
       BottomNavigationItem(
           icon = {
 
-//            if (section == HomeSection.Profile) {
-//              BottomBarProfile(selected)
-//            } else {
+            if (section == HomeSection.Profile) {
+              BottomBarProfile(selected)
+            } else {
               Icon(
                   imageResource(id = iconRes),
                   modifier = Modifier.icon()
               )
-//            }
+            }
 
           },
           selected = selected,
@@ -91,40 +98,40 @@ private fun BottomBar(
     }
   }
 }
-//
-//@Composable
-//private fun BottomBarProfile(isSelected: Boolean) {
-//  val shape = CircleShape
-//
-//  val borderModifier = if (isSelected) {
-//    Modifier
-//        .border(
-//            color = Color.LightGray,
-//            width = 1.dp,
-//            shape = shape
-//        )
-//  } else Modifier
-//
-//  val padding = if (isSelected) 3.dp else 0.dp
-//
-//  Box(
-//      modifier = borderModifier
-//  ) {
-//    Box(
-//        modifier = Modifier.icon()
-//            .padding(padding)
-//            .background(color = Color.LightGray, shape = shape)
-//            .clip(shape)
-//    ) {
-//      CoilImage(
-//          data = currentUser.image,
-//          contentScale = ContentScale.Crop,
-//          modifier = Modifier.fillMaxSize()
-//      )
-//    }
-//  }
-//
-//}
+
+@Composable
+private fun BottomBarProfile(isSelected: Boolean) {
+  val shape = CircleShape
+
+  val borderModifier = if (isSelected) {
+    Modifier
+        .border(
+            color = Color.LightGray,
+            width = 1.dp,
+            shape = shape
+        )
+  } else Modifier
+
+  val padding = if (isSelected) 3.dp else 0.dp
+
+  Box(
+      modifier = borderModifier
+  ) {
+    Box(
+        modifier = Modifier.icon()
+            .padding(padding)
+            .background(color = Color.LightGray, shape = shape)
+            .clip(shape)
+    ) {
+      CoilImage(
+          data = "https://avatars1.githubusercontent.com/u/22882981?v=4",
+          contentScale = ContentScale.Crop,
+          modifier = Modifier.fillMaxSize()
+      )
+    }
+  }
+
+}
 
 private enum class HomeSection(
   val icon: Int,

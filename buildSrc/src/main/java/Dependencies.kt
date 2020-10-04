@@ -15,6 +15,9 @@ object Versions {
     const val dagger = "2.29.1-alpha"
     const val daggerHilt = "1.0.0-alpha02"
     const val accompanist = "0.2.0"
+    const val room = "2.2.5"
+    const val activityKtx = "1.2.0-beta01"
+    const val fragmentKtx = "1.3.0-beta01"
 
 }
 
@@ -61,7 +64,8 @@ object Libs {
     const val stethoOkhttp3 = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
 
     //dagger Hilt
-    const val daggerHiltClasspath = "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
+    const val daggerHiltClasspath =
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
     const val daggerHiltAndroid = "com.google.dagger:hilt-android:${Versions.dagger}"
     const val daggerCommon = "androidx.hilt:hilt-common:${Versions.daggerHilt}"
     const val daggerViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.daggerHilt}"
@@ -71,7 +75,8 @@ object Libs {
 
     //lifecycle
     const val lifecycleExtension = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
-    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
 
     //Coroutines
@@ -83,6 +88,12 @@ object Libs {
 
     const val coil = "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"
 
+    const val room = "androidx.room:room-runtime:${Versions.room}"
+    const val roomKtx = "androidx.room:room-ktx:${Versions.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+
+    const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtx}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
 
     object Test {
         const val junit = "junit:junit:4.13"
