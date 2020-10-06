@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                     Timber.e(it.data.toString())
                     Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
                 }
-                is ViewState.Error<*> -> {
+                is ViewState.Error -> {
                     Toast.makeText(this, it.error, Toast.LENGTH_SHORT).show()
                 }
             }
