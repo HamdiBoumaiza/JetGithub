@@ -1,11 +1,12 @@
-import com.hb.jetgithub.buildsrc.*
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
-}
+import com.hb.jetgithub.buildsrc.Libs
+import com.hb.jetgithub.buildsrc.Plugins
+import com.hb.jetgithub.buildsrc.Versions
+
+apply plugin: Plugins.androidApplication
+apply plugin: Plugins.kotlinAndroid
+apply plugin: Plugins.kotlinAndroidExtensions
+apply plugin: Plugins.kotlinKapt
+apply plugin: Plugins.daggerHilt
 
 android {
     compileSdkVersion 30
@@ -49,7 +50,7 @@ android {
 }
 
 dependencies {
-    implementation Libs.Kotlin.stdlib
+    implementation Libs.stdlib
 
     implementation Libs.AndroidX.coreKtx
     implementation Libs.AndroidX.appcompat
@@ -101,5 +102,4 @@ dependencies {
     testImplementation Libs.Test.rules
     androidTestImplementation Libs.Test.Ext.junitExtension
     androidTestImplementation Libs.Test.espressoCore
-
 }

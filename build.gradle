@@ -7,10 +7,10 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath Libs.androidGradlePlugin
-        classpath Libs.Kotlin.gradlePlugin
-        classpath Libs.Kotlin.extensions
-        classpath Libs.daggerHiltClasspath
+        classpath ProjectDependencies.androidGradlePlugin
+        classpath ProjectDependencies.gradlePlugin
+        classpath ProjectDependencies.extensions
+        classpath ProjectDependencies.daggerHiltClasspath
     }
 }
 

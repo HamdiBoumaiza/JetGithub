@@ -1,42 +1,11 @@
 package com.hb.jetgithub.buildsrc
 
-
-object Versions {
-    const val gradle = "4.2.0-alpha09"
-    const val kotlin = "1.4.0"
-    const val ktlint = "0.37.2"
-
-    const val lifecycle = "2.2.0"
-    const val okhttp3 = "4.5.0"
-    const val stetho = "1.5.1"
-    const val retrofit = "2.8.1"
-    const val coroutine = "1.3.9"
-    const val timber = "4.7.1"
-    const val dagger = "2.29.1-alpha"
-    const val daggerHilt = "1.0.0-alpha02"
-    const val accompanist = "0.2.0"
-    const val room = "2.2.5"
-    const val activityKtx = "1.2.0-beta01"
-    const val fragmentKtx = "1.3.0-beta01"
-
-}
-
-
 object Libs {
-    object Kotlin {
-        const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
-        const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-        const val extensions = "org.jetbrains.kotlin:kotlin-android-extensions:${Versions.kotlin}"
-    }
-
-
     object AndroidX {
         const val appcompat = "androidx.appcompat:appcompat:1.3.0-alpha01"
         const val coreKtx = "androidx.core:core-ktx:1.5.0-alpha02"
-
         object Compose {
             private const val version = "1.0.0-alpha01"
-
             const val runtime = "androidx.compose.runtime:runtime:$version"
             const val foundation = "androidx.compose.foundation:foundation:${version}"
             const val layout = "androidx.compose.foundation:foundation-layout:${version}"
@@ -48,7 +17,7 @@ object Libs {
         }
     }
 
-    const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.gradle}"
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     const val material = "com.google.android.material:material:1.2.1"
 
     //Retrofit2
@@ -64,8 +33,7 @@ object Libs {
     const val stethoOkhttp3 = "com.facebook.stetho:stetho-okhttp3:${Versions.stetho}"
 
     //dagger Hilt
-    const val daggerHiltClasspath =
-        "com.google.dagger:hilt-android-gradle-plugin:${Versions.dagger}"
+
     const val daggerHiltAndroid = "com.google.dagger:hilt-android:${Versions.dagger}"
     const val daggerCommon = "androidx.hilt:hilt-common:${Versions.daggerHilt}"
     const val daggerViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.daggerHilt}"
