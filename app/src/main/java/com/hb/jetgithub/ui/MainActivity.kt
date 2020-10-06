@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
     private fun initObservers() {
         viewModel.viewState.observe(this, {
             when (it) {
-                is ViewState.Success<*> -> {
+                is MainActivityViewState.Success<*> -> {
                     Timber.e(it.data.toString())
                     Toast.makeText(this, "success", Toast.LENGTH_SHORT).show()
                 }
-                is ViewState.Error -> {
+                is MainActivityViewState.Error -> {
                     Toast.makeText(this, it.error, Toast.LENGTH_SHORT).show()
                 }
             }

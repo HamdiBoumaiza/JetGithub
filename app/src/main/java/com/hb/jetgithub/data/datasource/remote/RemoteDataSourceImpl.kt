@@ -1,8 +1,8 @@
-package com.hb.jetgithub.data.datasource
+package com.hb.jetgithub.data.datasource.remote
 
 import com.hb.jetgithub.data.GithubService
 
-class AppDataSourceImpl(private val api: GithubService) : AppDataSource {
+class RemoteDataSourceImpl(private val api: GithubService) : RemoteDataSource {
 
     override suspend fun getListUsers() = api.getUsersList()
     override suspend fun getCurrentUser(username: String) = api.getUserInfo(username)

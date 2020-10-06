@@ -3,7 +3,7 @@ package com.hb.jetgithub.buildsrc
 object Libs {
 
     object Compose {
-        const val version = "1.0.0-alpha04"
+        const val version = "1.0.0-alpha01"
         const val runtime = "androidx.compose.runtime:runtime:$version"
         const val foundation = "androidx.compose.foundation:foundation:${version}"
         const val layout = "androidx.compose.foundation:foundation-layout:${version}"

@@ -15,16 +15,16 @@ class MainActivityViewModel @ViewModelInject constructor(
     private val getListUsersUseCase: GetListUsersUseCase
 ) : ViewModel() {
 
-    private val _viewState = MutableLiveData<ViewState>()
-    val viewState: LiveData<ViewState> = _viewState
+    private val _viewState = MutableLiveData<MainActivityViewState>()
+    val viewState: LiveData<MainActivityViewState> = _viewState
 
     fun getListUsers() {
         viewModelScope.launch {
             getListUsersUseCase().
                 onSuccess {
-                _viewState.postValue(ViewState.Success(it))
+                _viewState.postValue(MainActivityViewState.Success(it))
                 }.onError {
-                _viewState.postValue(ViewState.Error(it))
+                _viewState.postValue(MainActivityViewState.Error(it))
             }
         }
     }
