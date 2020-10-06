@@ -45,24 +45,24 @@ android {
 
     composeOptions {
         kotlinCompilerVersion Versions.kotlin
-        kotlinCompilerExtensionVersion Libs.AndroidX.Compose.version
+        kotlinCompilerExtensionVersion Libs.Compose.version
     }
 }
 
 dependencies {
     implementation Libs.stdlib
 
-    implementation Libs.AndroidX.coreKtx
-    implementation Libs.AndroidX.appcompat
+    implementation Libs.coreKtx
+    implementation Libs.appcompat
 
-    implementation Libs.AndroidX.Compose.runtime
-    implementation Libs.AndroidX.Compose.foundation
-    implementation Libs.AndroidX.Compose.layout
-    implementation Libs.AndroidX.Compose.ui
-    implementation Libs.AndroidX.Compose.material
-    implementation Libs.AndroidX.Compose.animation
-    implementation Libs.AndroidX.Compose.iconsExtended
-    implementation Libs.AndroidX.Compose.tooling
+    implementation Libs.Compose.runtime
+    implementation Libs.Compose.foundation
+    implementation Libs.Compose.layout
+    implementation Libs.Compose.ui
+    implementation Libs.Compose.material
+    implementation Libs.Compose.animation
+    implementation Libs.Compose.iconsExtended
+    implementation Libs.Compose.tooling
 
     implementation Libs.coil
     implementation Libs.material

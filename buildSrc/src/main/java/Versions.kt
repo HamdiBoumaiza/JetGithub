@@ -5,6 +5,9 @@ object Versions {
     const val kotlin = "1.4.0"
     const val ktlint = "0.37.2"
 
+    const val coreKtx = "1.5.0-alpha02"
+    const val appCompact = "1.3.0-alpha01"
+    const val materialAndroid = "1.2.1"
     const val lifecycle = "2.2.0"
     const val okhttp3 = "4.5.0"
     const val stetho = "1.5.1"

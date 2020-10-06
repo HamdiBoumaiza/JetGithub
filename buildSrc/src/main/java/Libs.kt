@@ -1,24 +1,24 @@
 package com.hb.jetgithub.buildsrc
 
 object Libs {
-    object AndroidX {
-        const val appcompat = "androidx.appcompat:appcompat:1.3.0-alpha01"
-        const val coreKtx = "androidx.core:core-ktx:1.5.0-alpha02"
-        object Compose {
-            private const val version = "1.0.0-alpha01"
-            const val runtime = "androidx.compose.runtime:runtime:$version"
-            const val foundation = "androidx.compose.foundation:foundation:${version}"
-            const val layout = "androidx.compose.foundation:foundation-layout:${version}"
-            const val ui = "androidx.compose.ui:ui:${version}"
-            const val material = "androidx.compose.material:material:${version}"
-            const val animation = "androidx.compose.animation:animation:${version}"
-            const val tooling = "androidx.ui:ui-tooling:${version}"
-            const val iconsExtended = "androidx.compose.material:material-icons-extended:$version"
-        }
+
+    object Compose {
+        const val version = "1.0.0-alpha04"
+        const val runtime = "androidx.compose.runtime:runtime:$version"
+        const val foundation = "androidx.compose.foundation:foundation:${version}"
+        const val layout = "androidx.compose.foundation:foundation-layout:${version}"
+        const val ui = "androidx.compose.ui:ui:${version}"
+        const val material = "androidx.compose.material:material:${version}"
+        const val animation = "androidx.compose.animation:animation:${version}"
+        const val tooling = "androidx.ui:ui-tooling:${version}"
+        const val iconsExtended = "androidx.compose.material:material-icons-extended:$version"
     }
 
+
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
-    const val material = "com.google.android.material:material:1.2.1"
+    const val appcompat = "androidx.appcompat:appcompat:${Versions.appCompact}"
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val material = "com.google.android.material:material:${Versions.materialAndroid}"
 
     //Retrofit2
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
@@ -43,8 +43,7 @@ object Libs {
 
     //lifecycle
     const val lifecycleExtension = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
-    const val lifecycleViewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
 
     //Coroutines
@@ -67,8 +66,7 @@ object Libs {
         const val junit = "junit:junit:4.13"
         const val espressoCore = "androidx.test.espresso:espresso-core:3.3.0"
         private const val CoroutinesVersion = "1.3.9"
-        const val coroutinesTest =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-test:$CoroutinesVersion"
+        const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$CoroutinesVersion"
 
         private const val version = "1.2.0"
         const val core = "androidx.test:core:$version"
