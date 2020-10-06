@@ -24,5 +24,5 @@ interface AppDao {
     suspend fun insertUser(posters: GithubUserResponse)
 
     @Query("SELECT * FROM GithubUserResponse")
-    suspend fun getUser(): GithubUserResponse
+    suspend fun getUser(): GithubUserResponse?
 }
