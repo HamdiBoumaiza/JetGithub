@@ -6,6 +6,7 @@ import com.hb.jetgithub.data.datasource.AppDataSource
 import com.hb.jetgithub.data.datasource.local.AppDao
 import com.hb.jetgithub.data.mappers.mapToDomainModel
 import com.hb.jetgithub.domain.models.GithubRepositoryModel
+import com.hb.jetgithub.domain.models.GithubUserModel
 import com.hb.jetgithub.domain.models.GithubUsersListModel
 import com.hb.jetgithub.domain.repository.AppRepository
 
@@ -36,6 +37,21 @@ class AppRepositoryImpl(
             }
         } else {
             AppResult.Success(listReposDao.map { it.mapToDomainModel() })
+        }
+    }
+
+    override suspend fun getCurrentUser(username: String): AppResult<GithubUserModel> {
+        val currentUser = appDao.getUser()
+        return if (currentUser == null) {
+            val result = appDataSource.getCurrentUser(username)
+            if (result.isSuccessful) {
+                result.body()?.let { appDao.insertUser(it) }
+                AppResult.Success(result.body()?.mapToDomainModel() ?: GithubUserModel())
+            } else {
+                AppResult.Error(result.errorBody().toString())
+            }
+        } else {
+            AppResult.Success(currentUser.mapToDomainModel())
         }
     }
 }

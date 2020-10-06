@@ -1,6 +1,4 @@
-import com.hb.jetgithub.buildsrc.Libs
-import com.hb.jetgithub.buildsrc.Versions
-
+import com.hb.jetgithub.buildsrc.*
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
@@ -14,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.hb.jetgithub"
-        minSdkVersion 28
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
